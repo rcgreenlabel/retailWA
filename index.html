@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="GoogleSheet.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Data Input App</h1>
+      <form method="post" action="https://script.google.com/a/macros/greenlabelrecycling.com/s/AKfycbxQBtQWAcJgZ-I0e7RbjiGi4_XSy_vx5KpFl0V2_h1OKCyLlvnJRmJSSgtBLYVk70Gr/exec" name="data-form">
+          <label for="item">Item:</label>
+          <input type="text" name="Item" required><br>
+
+          <label for="manufacturer">Manufacturer:</label>
+          <input type="text" name="Manufacturer"><br>
+
+          <label for="sn">SN:</label>
+          <input type="text" name="SN" step="0.01"><br>
+
+          <label for="description">Description:</label>
+          <input type="text" name="Description" step="0.01"><br>
+
+          <label for="cosmetic">Cosmetic:</label>
+          <input type="text" name="Cosmetic" step="0.01"><br>
+
+          <label for="function">Function:</label>
+          <input type="text" name="Function" step="0.01"><br>
+
+          <label for="storage">Storage:</label>
+          <input type="text" name="Storage" step="0.01"><br>
+
+          <label for="tester">Tester:</label>
+          <input type="text" name="Tester" step="0.01"><br>
+
+          <label for="indate">Current Date:</label>
+          <input type="date" id="indate" name="InDate" required><br>
+
+          <input type="submit" id="submit" value="Submit">
+      </form>
+    </div>
+    <script src="GoogleSheet.js"></script>
+</body>
+<script>
+  document.getElementById('indate').value = new Date().toISOString().substring(0, 10);
+</script>
+</html>
